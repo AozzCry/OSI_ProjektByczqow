@@ -1,0 +1,400 @@
+body {
+  margin: 1vh 1vh;
+  padding: 0;
+  font-family: "Verdana", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.pictures {
+  display: none;
+}
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/main/revolt-164_6wVEHfI-unsplash.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  animation: introLoad 2s forwards;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: white;
+  width: 50%;
+  z-index: 99;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8rem;
+}
+
+nav ul a {
+  color: black;
+  padding: 0.75rem 2rem;
+  display: block;
+}
+
+nav ul a:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header svg {
+  width: 2.5em;
+  margin-top: -0.6em;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-top: 2em;
+  line-height: 1.9rem;
+}
+
+.subhead {
+  font-size: 1.4rem;
+}
+
+section.hero {
+  color: white;
+  height: 90vh;
+  animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+section.hero .down-arrow {
+  margin: 3.9em;
+  stroke: white;
+  position: relative;
+  width: 2em;
+  animation: moveArrow 1.5s alternate-reverse infinite;
+  
+}
+
+section.hero .down-arrow path {
+  fill: white;
+  transform: scale(0.0);
+}
+
+.more-info img {
+  width: 100%;
+  object-fit: cover;
+  height: 11em;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.more-info .desc {
+  line-height: 1.5rem;
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1vh 1vh;
+  }
+  a {
+    font-size: 1.4rem;
+  }
+  section.hero svg.down-arrow path {
+    fill: white;
+    transform: scale(0.4);
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+
+  nav svg.close {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+
+  nav ul a {
+    color: white;
+    padding: 0.2em 0.3em;
+    font-size: 1.2rem;
+  }
+
+  nav ul a:hover {
+    text-decoration: underline;
+  }
+
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+  }
+
+  .logo {
+    color: black;
+  }
+
+  .logo span {
+    color: red;
+  }
+
+  section.hero {
+    color: black;
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+    min-height: 80vh;
+  }
+
+  section.hero svg.down-arrow {
+    stroke: black;
+    position: unset;
+  }
+
+  section.hero svg.down-arrow path {
+    fill: black;
+    transform: scale(0.6);
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 4rem;
+    margin-bottom: 10vh;
+  }
+
+  .feature img {
+    width: 40vh;
+  }
+
+  .feature .content {
+    text-align: right;
+    width: 100%;
+  }
+
+  .feature.left {
+    grid-template-areas: "left right";
+  }
+
+  .feature.left img {
+    grid-row: 1;
+    grid-column: 1;
+    grid-area: left;
+  }
+
+  .feature.left .content {
+    text-align: left;
+    width: 100%;
+    justify-self: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  nav ul a {
+    color: white;
+    padding: 0.2em 0.3em;
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 3.3rem;
+    line-height: 3.3rem;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .feature p {
+    font-size: 1.4em;
+    margin-right: 3rem;
+  }
+  .left p {
+    font-size: 1.4em;
+    margin-left: 3rem;
+  }
+  .feature {
+    gap: 0;
+  }
+  section.hero svg.down-arrow path {
+    fill: black;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.pictures {
+  margin-top:8vh;
+}
+
+.pictures img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+/* Big picture */
+#full {
+  z-index: 3 !important;
+  transition: 0.9s ease-out;
+  position: relative;
+  height: 16rem;
+  width: 14rem;
+  display: inline-block;
+  transform: scale(2.4);
+}
+
+/* Small picture */
+.pic {
+  transition: 1.1s ease-in;
+  position: relative;
+  text-align: center;
+  height: 16rem;
+  width: 14rem;
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  margin: 2px;
+}
+.pic h2, #full h2 {
+  position: absolute;
+  bottom: 56px;
+  left: 16px;
+  color: white;
+}
+
+.pic p, #full p {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+}
+#full h2 { 
+  font-size: 0.8rem;
+  transition: 1.1s ease;
+}
+#full p { 
+  font-size: 0.6rem;
+  transition: 1.1s ease;
+}
+
+.pic:hover {
+  transition: 0.2s linear;
+  transform: rotate(10deg) scale(1.3);
+  z-index: 2;
+}
+
+.pic:not(:hover) {
+  transition: 0.2s ease-in-out;
+  transform: rotate(0deg) scale(1);
+}
+
+.pic:nth-child(1) {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+.pic:nth-child(2) {
+  background: linear-gradient(235deg, white, #010615, white);
+}
+.pic:nth-child(3) {
+  background: linear-gradient(235deg, #ff073a, #010615, #ff073a);
+}
+.pic:nth-child(4) {
+  background: linear-gradient(235deg, #fc8427, #010615, #fc8427);
+}
+.pic:nth-child(5) {
+  background: linear-gradient(235deg, #08ff08, #010615, #08ff08);
+}
+.pic:nth-child(6) {
+  background: linear-gradient(235deg, white, #010615, #ccff02);
+}
+.pic:nth-child(7) {
+  background: linear-gradient(235deg, #6600ff, #010615, #6600ff);
+}
+.pic:nth-child(8) {
+  background: linear-gradient(235deg, #04d9ff, #010615, #04d9ff);
+}
+.pic:nth-child(9) {
+  background: linear-gradient(235deg, #fe4164, #010615, #fe4164);
+}
+.pic:nth-child(10) {
+  background: linear-gradient(235deg, #00fdff, #010615, #00fdff);
+}
