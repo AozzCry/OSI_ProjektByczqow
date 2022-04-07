@@ -9,7 +9,7 @@ $(".close").on("click", () => {
 $(".gallery").on("click", () => {
   $(".wrapper section").hide();
   $(".pictures").show();
-  $(".hero-img").css("height","10vh");
+  $(".hero-img").css("height","12vh");
   $('.pic').each(function (index, elem) {
     $(elem).data('startX', $(elem).position().left);
     $(elem).data('startY', $(elem).position().top);

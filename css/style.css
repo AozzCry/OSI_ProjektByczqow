@@ -27,6 +27,7 @@ a {
 .logo {
   color: white;
   font-weight: bold;
+  font-size: 1.5rem;
   margin-left: 10%;
 }
 
@@ -138,6 +139,9 @@ section.hero .down-arrow path {
   section.hero svg.down-arrow path {
     fill: white;
     transform: scale(0.4);
+  }
+  .logo {
+    font-size: 2.7rem;
   }
 }
 
