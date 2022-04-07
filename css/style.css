@@ -1,7 +1,6 @@
 body {
-  margin: 1vh 1vh;
-  padding: 0;
-  font-family: "Verdana", sans-serif;
+  padding: 2vh 0 0 0;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -28,6 +27,7 @@ a {
 .logo {
   color: white;
   font-weight: bold;
+  margin-left: 10%;
 }
 
 nav {
@@ -45,7 +45,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  padding: 0;
+  padding-right: 10vh;
   margin-top: 8rem;
 }
 
@@ -73,7 +73,7 @@ header {
 
 header svg {
   width: 2.5em;
-  margin-top: -0.6em;
+  margin-top: 0.6em;
   cursor: pointer;
 }
 
@@ -92,6 +92,7 @@ section.hero {
   height: 90vh;
   animation: moveDown 1s ease-in-out forwards;
   opacity: 0;
+  margin: 10%;
 }
 
 section.hero .down-arrow {
@@ -191,7 +192,7 @@ section.hero .down-arrow path {
   section.hero {
     color: black;
     height: auto;
-    width: 40%;
+    width: 35%;
     margin-bottom: 8em;
     min-height: 80vh;
   }
@@ -214,7 +215,7 @@ section.hero .down-arrow path {
   }
 
   .feature img {
-    width: 40vh;
+    width: 50vh;
   }
 
   .feature .content {
@@ -271,6 +272,11 @@ section.hero .down-arrow path {
     fill: black;
     transform: scale(1.0);
   }
+  
+  .more-info {
+    padding-left: 15vh;
+    padding-right: 15vh;
+  }
 }
 
 @keyframes introLoad {
@@ -305,6 +311,8 @@ section.hero .down-arrow path {
 }
 .pictures {
   margin-top:8vh;
+  padding-right: 10vw;
+  padding-left: 10vw;
 }
 
 .pictures img {
@@ -318,7 +326,7 @@ section.hero .down-arrow path {
   transition: 0.9s ease-out;
   position: relative;
   height: 16rem;
-  width: 14rem;
+  width: 15rem;
   display: inline-block;
   transform: scale(2.4);
 }
@@ -332,8 +340,8 @@ section.hero .down-arrow path {
   width: 14rem;
   display: inline-block;
   z-index: 1;
-  padding: 5px;
-  margin: 2px;
+  padding: 3px;
+  margin: 5px;
 }
 .pic h2, #full h2 {
   position: absolute;
@@ -368,33 +376,65 @@ section.hero .down-arrow path {
   transform: rotate(0deg) scale(1);
 }
 
-.pic:nth-child(1) {
+.pic::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(30px);
+}
+
+.pic::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.pic:nth-child(1)::before,
+.pic:nth-child(1)::after {
   background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
-.pic:nth-child(2) {
+.pic:nth-child(2)::before,
+.pic:nth-child(2)::after {
   background: linear-gradient(235deg, white, #010615, white);
 }
-.pic:nth-child(3) {
+.pic:nth-child(3)::before,
+.pic:nth-child(3)::after {
   background: linear-gradient(235deg, #ff073a, #010615, #ff073a);
 }
-.pic:nth-child(4) {
+.pic:nth-child(4)::before,
+.pic:nth-child(4)::after {
   background: linear-gradient(235deg, #fc8427, #010615, #fc8427);
 }
-.pic:nth-child(5) {
+.pic:nth-child(5)::before,
+.pic:nth-child(5)::after {
   background: linear-gradient(235deg, #08ff08, #010615, #08ff08);
 }
-.pic:nth-child(6) {
+.pic:nth-child(6)::before,
+.pic:nth-child(6)::after {
   background: linear-gradient(235deg, white, #010615, #ccff02);
 }
-.pic:nth-child(7) {
+.pic:nth-child(7)::before,
+.pic:nth-child(7)::after {
   background: linear-gradient(235deg, #6600ff, #010615, #6600ff);
 }
-.pic:nth-child(8) {
+.pic:nth-child(8)::before,
+.pic:nth-child(8)::after {
   background: linear-gradient(235deg, #04d9ff, #010615, #04d9ff);
 }
-.pic:nth-child(9) {
+.pic:nth-child(9)::before,
+.pic:nth-child(9)::after {
   background: linear-gradient(235deg, #fe4164, #010615, #fe4164);
 }
-.pic:nth-child(10) {
+.pic:nth-child(10)::before,
+.pic:nth-child(10)::after {
   background: linear-gradient(235deg, #00fdff, #010615, #00fdff);
 }
