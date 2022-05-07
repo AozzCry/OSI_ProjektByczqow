@@ -8,7 +8,19 @@ $(".close").on("click", () => {
 
 $(".gallery").on("click", () => {
   $(".wrapper section").hide();
+  $(".weplayers").hide();
   $(".pictures").show();
+  $(".hero-img").css("height","12vh");
+  $('.pic').each(function (index, elem) {
+    $(elem).data('startX', $(elem).position().left);
+    $(elem).data('startY', $(elem).position().top);
+  });
+});
+
+$(".players").on("click", () => {
+  $(".wrapper section").hide();
+  $(".pictures").hide();
+  $(".weplayers").show();
   $(".hero-img").css("height","12vh");
   $('.pic').each(function (index, elem) {
     $(elem).data('startX', $(elem).position().left);
@@ -19,6 +31,7 @@ $(".gallery").on("click", () => {
 $(".home").on("click", () => {
   $(".wrapper section").show();
   $(".pictures").hide();
+  $(".weplayers").hide();
   $(".hero-img").css("height","100vh");
 });
 

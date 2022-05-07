@@ -7,9 +7,15 @@ a {
   text-decoration: none;
   font-size: 1.4rem;
 }
+
 .pictures {
   display: none;
 }
+
+.weplayers {
+  display: none;
+}
+
 .hero-img {
   position: absolute;
   top: 0;
@@ -101,7 +107,7 @@ section.hero .down-arrow {
   position: relative;
   width: 2em;
   animation: moveArrow 1.5s alternate-reverse infinite;
-  
+
 }
 
 section.hero .down-arrow path {
@@ -132,13 +138,16 @@ section.hero .down-arrow path {
   body {
     margin: 1vh 1vh;
   }
+
   a {
     font-size: 1.4rem;
   }
+
   section.hero svg.down-arrow path {
     fill: white;
     transform: scale(0.4);
   }
+
   .logo {
     font-size: 2.7rem;
   }
@@ -248,34 +257,41 @@ section.hero .down-arrow path {
     width: 100%;
     margin: 0 auto;
   }
+
   nav ul a {
     color: white;
     padding: 0.2em 0.3em;
     font-size: 1.6rem;
   }
+
   h1 {
     font-size: 3.3rem;
     line-height: 3.3rem;
   }
+
   p {
     font-size: 1.4em;
   }
+
   .feature p {
     font-size: 1.4em;
     margin-right: 3rem;
   }
+
   .left p {
     font-size: 1.4em;
     margin-left: 3rem;
   }
+
   .feature {
     gap: 0;
   }
+
   section.hero svg.down-arrow path {
     fill: black;
     transform: scale(1.0);
   }
-  
+
   .more-info {
     padding-left: 15vh;
     padding-right: 15vh;
@@ -312,8 +328,35 @@ section.hero .down-arrow path {
     opacity: 1;
   }
 }
+
+.weplayers {
+  margin-top: 8vh;
+  padding-top: 10vh;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  margin: 20px;
+  text-align: center;
+}
+
+.weplayers img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  position: relative;
+  text-align: center;
+  height: 16rem;
+  width: 14rem;
+  display: inline-block;
+  z-index: 1;
+  padding: 8px;
+  margin: 5px;
+}
+
 .pictures {
-  margin-top:8vh;
+  margin-top: 8vh;
   padding-right: 10vw;
   padding-left: 10vw;
 }
@@ -323,6 +366,7 @@ section.hero .down-arrow path {
   height: 100%;
   width: 100%;
 }
+
 /* Big picture */
 #full {
   z-index: 3 !important;
@@ -346,24 +390,29 @@ section.hero .down-arrow path {
   padding: 3px;
   margin: 5px;
 }
-.pic h2, #full h2 {
+
+.pic h2,
+#full h2 {
   position: absolute;
   bottom: 56px;
   left: 16px;
   color: white;
 }
 
-.pic p, #full p {
+.pic p,
+#full p {
   position: absolute;
   bottom: 8px;
   left: 16px;
   color: white;
 }
-#full h2 { 
+
+#full h2 {
   font-size: 0.8rem;
   transition: 1.1s ease;
 }
-#full p { 
+
+#full p {
   font-size: 0.6rem;
   transition: 1.1s ease;
 }
@@ -401,42 +450,52 @@ section.hero .down-arrow path {
   background: #fff;
   z-index: -1;
 }
+
 .pic:nth-child(1)::before,
 .pic:nth-child(1)::after {
   background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
+
 .pic:nth-child(2)::before,
 .pic:nth-child(2)::after {
   background: linear-gradient(235deg, white, #010615, white);
 }
+
 .pic:nth-child(3)::before,
 .pic:nth-child(3)::after {
   background: linear-gradient(235deg, #ff073a, #010615, #ff073a);
 }
+
 .pic:nth-child(4)::before,
 .pic:nth-child(4)::after {
   background: linear-gradient(235deg, #fc8427, #010615, #fc8427);
 }
+
 .pic:nth-child(5)::before,
 .pic:nth-child(5)::after {
   background: linear-gradient(235deg, #08ff08, #010615, #08ff08);
 }
+
 .pic:nth-child(6)::before,
 .pic:nth-child(6)::after {
   background: linear-gradient(235deg, white, #010615, #ccff02);
 }
+
 .pic:nth-child(7)::before,
 .pic:nth-child(7)::after {
   background: linear-gradient(235deg, #6600ff, #010615, #6600ff);
 }
+
 .pic:nth-child(8)::before,
 .pic:nth-child(8)::after {
   background: linear-gradient(235deg, #04d9ff, #010615, #04d9ff);
 }
+
 .pic:nth-child(9)::before,
 .pic:nth-child(9)::after {
   background: linear-gradient(235deg, #fe4164, #010615, #fe4164);
 }
+
 .pic:nth-child(10)::before,
 .pic:nth-child(10)::after {
   background: linear-gradient(235deg, #00fdff, #010615, #00fdff);
