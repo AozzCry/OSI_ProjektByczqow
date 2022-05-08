@@ -8,6 +8,19 @@ a {
   font-size: 1.4rem;
 }
 
+.dark-mode {
+  background-color: black !important;
+  color: white !important;
+}
+
+.dark-modeSVG {
+  filter: invert(99%) sepia(2%) saturate(316%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+}
+
+.darkModeIcon {
+  padding: 13px;
+}
+
 .pictures {
   display: none;
 }
@@ -107,7 +120,6 @@ section.hero .down-arrow {
   position: relative;
   width: 2em;
   animation: moveArrow 1.5s alternate-reverse infinite;
-
 }
 
 section.hero .down-arrow path {
@@ -134,7 +146,7 @@ section.hero .down-arrow path {
   transform: translateX(0%);
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 0px) {
   body {
     margin: 1vh 1vh;
   }
@@ -151,11 +163,27 @@ section.hero .down-arrow path {
   .logo {
     font-size: 2.7rem;
   }
+
+  .bigScreen {
+    display:none;
+  }
+
+  .smallScreen {
+    display:block;
+  }
 }
 
 @media only screen and (min-width: 920px) {
   .menu {
     display: none;
+  }
+
+  .bigScreen {
+    display:block;
+  }
+
+  .smallScreen {
+    display:none;
   }
 
   nav {
