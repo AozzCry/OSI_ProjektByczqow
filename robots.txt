@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: https://shoebrandstore.netlify.app/gallery/
+Disallow: https://shoebrandstore.netlify.app/players/
+Disallow: https://shoebrandstore.netlify.app/main/
+
+sitemap: https://shoebrandstore.netlify.app/sitemap.xml
